@@ -33,7 +33,9 @@ HPCdata <- cbind(dateTime, HPCdata)
 HPCdata$dateTime <- as.POSIXct(dateTime)
 
 
-## Create Plot 2
-plot(HPCdata$Global_active_power~HPCdata$dateTime, 
-     type="l", ylab="Global Active Power (kilowatts)",
-     xlab="")
+
+## Create the histogram
+hist(HPCdata$Global_active_power, 
+     main="Global Active Power", 
+     xlab = "Global Active Power (kilowatts)", 
+     col="red")
